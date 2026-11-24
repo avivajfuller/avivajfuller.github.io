@@ -146,6 +146,7 @@ a { color: var(--accent); }
   margin: 6px 0 0;
 }
 .entry-meta span { display: block; }
+.entry > :last-child { margin-bottom: 0; }
 
 .highlights {
   list-style: none;
