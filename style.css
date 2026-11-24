@@ -231,6 +231,62 @@ a.entry:focus-visible .see-more { background: var(--accent); color: #fff; border
 a.entry:hover .see-more span,
 a.entry:focus-visible .see-more span { transform: translateX(4px); }
 
+.content .section-label { margin: 32px 0 12px; }
+
+/* ---------- Detail pages (research/, projects/, ...) ---------- */
+.detail {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 40px 24px 80px;
+}
+.back {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: .82rem;
+  text-decoration: none;
+  margin-bottom: 36px;
+}
+.back:hover { text-decoration: underline; }
+.detail .label {
+  font-family: var(--mono);
+  font-size: .72rem;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  margin: 0 0 8px;
+}
+.detail h1 {
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: clamp(2.1rem, 5vw, 3rem);
+  line-height: 1.1;
+  margin: 0 0 14px;
+}
+.detail-meta {
+  font-family: var(--mono);
+  font-size: .82rem;
+  color: var(--ink-soft);
+  margin: 0 0 16px;
+}
+.detail .highlights { margin-bottom: 28px; }
+.detail .entry .highlights { margin: 0; }
+.detail .entry h2 {
+  font-family: var(--serif);
+  font-weight: 600;
+  font-size: 1.45rem;
+  margin: 0 0 10px;
+}
+.detail .entry p { margin: 0 0 1em; }
+.detail .entry p:last-child { margin-bottom: 0; }
+.courses.single { grid-template-columns: 1fr; gap: 10px; }
+.courses.single li { font-size: 1em; }
+.detail-note {
+  font-size: .9rem;
+  font-style: italic;
+  color: var(--ink-soft);
+  margin-top: 28px;
+}
+
 /* ---------- Mobile ---------- */
 @media (max-width: 800px) {
   body { font-size: 17px; }
@@ -257,3 +313,16 @@ a.entry:focus-visible .see-more span { transform: translateX(4px); }
   .entry-meta span + span::before { content: "· "; }
   .courses { grid-template-columns: 1fr; }
 }
+
+@media (max-width: 800px) {
+  .detail { padding: 28px 16px 64px; }
+}
+
+/* Book / paper citations on detail pages */
+.reference { padding-left: 1.6em; text-indent: -1.6em; }
+.reference cite { font-style: italic; }
+.reference a { word-break: break-all; }
+.reference-list { list-style: none; padding: 0; margin: 0; }
+.reference-list li { padding-left: 1.6em; text-indent: -1.6em; margin-bottom: .75em; }
+.reference-list li:last-child { margin-bottom: 0; }
+.reference-list cite { font-style: italic; }
