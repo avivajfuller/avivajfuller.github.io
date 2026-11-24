@@ -106,6 +106,93 @@ a { color: var(--accent); }
 }
 .content h3 { font-size: 1.1rem; font-weight: 500; margin: 1.6em 0 .2em; }
 
+/* ---------- Entries (education, experience, ...) ---------- */
+.entry {
+  padding: 28px 0 30px;
+  border-top: 1px solid var(--line);
+}
+.entry:last-child { border-bottom: 1px solid var(--line); }
+
+.entry-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 24px;
+  margin-bottom: 16px;
+}
+.content .entry-title {
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: 1.65rem;
+  line-height: 1.2;
+  margin: 0;
+}
+.content .entry-sub {
+  font-style: italic;
+  color: var(--ink-soft);
+  margin: 2px 0 0;
+}
+.content .entry-meta {
+  font-family: var(--mono);
+  font-size: .78rem;
+  line-height: 1.7;
+  color: var(--ink-soft);
+  text-align: right;
+  white-space: nowrap;
+  margin: 6px 0 0;
+}
+.entry-meta span { display: block; }
+
+.highlights {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 0;
+  margin: 0 0 20px;
+}
+.highlights li {
+  font-size: .85rem;
+  font-weight: 500;
+  color: var(--accent);
+  background: #fbe3ea;
+  border: 1px solid #f4c9d6;
+  padding: 3px 12px;
+  border-radius: 999px;
+}
+
+.content .label {
+  font-family: var(--mono);
+  font-size: .72rem;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  margin: 0 0 6px;
+}
+.courses {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2px 28px;
+}
+.courses li {
+  position: relative;
+  padding-left: 18px;
+  font-size: .95rem;
+}
+.courses li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: .68em;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  border: 1.5px solid var(--accent);
+}
+
 /* ---------- Mobile ---------- */
 @media (max-width: 800px) {
   body { font-size: 17px; }
@@ -125,4 +212,9 @@ a { color: var(--accent); }
   .menu li { border: 0; }
   .menu a { padding: 4px 0; font-size: .95rem; }
   .content h2 { font-size: 2.1rem; }
+  .entry-head { flex-direction: column; gap: 4px; }
+  .content .entry-meta { text-align: left; white-space: normal; margin: 4px 0 0; }
+  .entry-meta span { display: inline; }
+  .entry-meta span + span::before { content: "· "; }
+  .courses { grid-template-columns: 1fr; }
 }
