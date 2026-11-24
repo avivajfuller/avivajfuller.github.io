@@ -327,3 +327,23 @@ a.entry:focus-visible .see-more span { transform: translateX(4px); }
 .reference-list li { padding-left: 1.6em; text-indent: -1.6em; margin-bottom: .75em; }
 .reference-list li:last-child { margin-bottom: 0; }
 .reference-list cite { font-style: italic; }
+
+/* Course rows (Teaching page) */
+.course-rows { list-style: none; padding: 0; margin: 0; }
+.course-rows li {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 16px;
+  padding: 10px 0;
+  border-top: 1px solid var(--line);
+}
+.course-rows li:first-child { border-top: 0; padding-top: 0; }
+.course-rows li:last-child { padding-bottom: 0; }
+.course-rows .count {
+  font-family: var(--mono);
+  font-size: .78rem;
+  color: var(--ink-soft);
+  white-space: nowrap;
+}
+a.entry .courses.single { margin-bottom: 18px; }
